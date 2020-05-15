@@ -13,16 +13,16 @@
 
 
 // Event Loop --> Message Queue
-const bar = () => console.log('bar')
-const baz = () => console.log('baz')
+// const bar = () => console.log('bar')
+// const baz = () => console.log('baz')
 
-const foo = () => {
-  console.log('foo')
-  setTimeout(bar, 20000)
-  baz()
-}
-debugger
-foo() // foo, baz, bar
+// const foo = () => {
+//   console.log('foo')
+//   setTimeout(bar, 20000)
+//   baz()
+// }
+// debugger
+// foo() // foo, baz, bar
 
 
 // Event Loop --> Job Queue
