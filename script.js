@@ -42,7 +42,7 @@
 
 
 
-// const button = document.getElementById('btn')
+const button = document.getElementById('btn')
 
 // Callback Version
 
@@ -80,13 +80,30 @@
 
 // checkIfItIsDone()
 
-// HTMLDocument.prototype.isDOMLoadedYet = new Promise((resolve) => {
-//   document.addEventListener('DOMContentLoaded', () => {
-//     resolve({'status': 'loaded and ready'})
-//   })
-// }).catch(err => {
-//   console.error(err)
-// })
+HTMLDocument.prototype.isDOMLoadedYet = new Promise((resolve) => {
+  document.addEventListener('DOMContentLoaded', () => {
+    resolve({'status': 'loaded and ready'})
+  })
+}).catch(err => {
+  console.error(err)
+})
+
+const buttonClickPro = (btn) => {
+  return new Promise((resolve, reject) => {
+    btn.addEventListener('click', () => {
+      resolve('clicked me')
+    })
+  })
+}
+
+document.isDOMLoadedYet
+  .then(status => console.log(status))
+  .then(() => {
+    return buttonClickPro(button)  
+  })
+  .then(msg => {
+    console.log(msg)
+  })
 
 // document.isDOMLoadedYet
 //   .then(status => console.log(status))
