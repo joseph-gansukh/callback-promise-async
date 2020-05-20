@@ -88,7 +88,7 @@ HTMLDocument.prototype.isDOMLoadedYet = new Promise((resolve) => {
   console.error(err)
 })
 
-const buttonClickPro = (btn) => {
+const buttonClickPromise = (btn) => {
   return new Promise((resolve, reject) => {
     btn.addEventListener('click', () => {
       resolve('clicked me')
@@ -99,7 +99,7 @@ const buttonClickPro = (btn) => {
 document.isDOMLoadedYet
   .then(status => console.log(status))
   .then(() => {
-    return buttonClickPro(button)  
+    return buttonClickPromise(button)  
   })
   .then(msg => {
     console.log(msg)
