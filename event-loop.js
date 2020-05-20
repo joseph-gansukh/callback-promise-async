@@ -1,4 +1,4 @@
-Event Loop --> Call Stack
+// Event Loop --> Call Stack
 
 const bar = () => console.log('bar')
 const baz = () => console.log('baz')
@@ -8,10 +8,11 @@ const foo = () => {
   bar()
   baz()
 }
+debugger
 foo() // foo, bar, baz
 
 
-Event Loop --> Message Queue
+// Event Loop --> Message Queue
 const bar = () => console.log('bar')
 const baz = () => console.log('baz')
 
@@ -24,7 +25,7 @@ debugger
 foo() // foo, baz, bar
 
 
-Event Loop --> Job Queue
+// Event Loop --> Job Queue
 const bar = () => console.log('bar')
 const baz = () => console.log('baz')
 
