@@ -1,7 +1,6 @@
 const button = document.getElementById('btn')
 
 // Callback Version
-
 // document.addEventListener('DOMContentLoaded', () => {
 //   console.log("loaded and ready")
 
@@ -20,7 +19,6 @@ const button = document.getElementById('btn')
 // })
 
 // Promise Version (ES6)
-
 // let done = true
 
 // const isItDoneYet = new Promise((resolve, reject) => {
